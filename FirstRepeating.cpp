@@ -1,5 +1,24 @@
 // https://www.codingninjas.com/codestudio/problems/first-repeated-character_1214646
 
+int firstRepeated(int a[], int n) {
+	map<int, int> mp;
+
+	for (int i=0; i<n; i++)
+	{
+	    mp[a[i]]++;
+	}
+
+	for (int i=0; i<n; i++)
+	{
+	    if (mp[a[i]] > 1)	// cannot use count() bcoz it gives either 1 or 0
+		return i+1;
+	}
+
+	return -1;
+}
+
+OR
+
 int firstRepeated(int v[], int n) {
     set<int> s;
     int min = -1;
