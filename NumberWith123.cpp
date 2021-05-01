@@ -5,7 +5,7 @@ bool isValid(int n)
 {
     bool flag=true;
     
-    while (n)
+    while (n) 
     {
         int d = n % 10;
         
