@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/first-repeated-character_1214646
+// https://practice.geeksforgeeks.org/problems/first-repeating-element4018/1/?track=DSASP-Hashing&batchId=155
 
 int firstRepeated(int a[], int n) {
 	map<int, int> mp;
