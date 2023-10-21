@@ -95,4 +95,20 @@ void printDistinct(int a[], int n, int k)
 	}
 }
 
+# Python Code
+
+def count_distinct(a, k):
+    d = {}
+    
+    for i in range(len(a)):
+        d[a[i]] = d.get(a[i], 0) + 1
+        if i >= k-1:
+            print(len(d), end=' ')
+            d[a[i+1-k]] -= 1
+            if d[a[i+1-k]] == 0:
+                d.pop(a[i+1-k])
+
+a = [1, 2, 4, 4]; k = 2
+count_distinct(a, k)
+	
 
